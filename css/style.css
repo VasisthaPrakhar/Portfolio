@@ -237,8 +237,8 @@ section.skills .meter {
       color: var(--pure);
   }
   section.reviews .slider .slide img{
-      width: 100px;
-      height: 100px;
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
       object-fit:cover;
       margin-bottom: 2rem;
@@ -257,6 +257,59 @@ section.skills .meter {
   }
   section.reviews .slider .slide span{
       font-size: 0.8rem ;
-        
+    }
+    section.reviews .slider-dots .dots{
+        list-style-type: none;
+        display: flex!important;
+        justify-content:center;
+    }
+    section.reviews .slider-dots{
+        margin-top:3rem;
 
-  }
+    }
+    section.reviews .slider-dots button{
+        font-size: 0;
+        width:8px;
+        height:5px;
+        margin-right: 0.3rem;
+        border:none;
+        outline:none;
+        background:var(--ternary);
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    section.reviews .dots li.slick-active button{
+        background: var(--primary);
+        width: 20px;
+    }
+    .slick-slide{
+        margin: 0 20px;
+    }
+    .slick-slide img{
+        width: 100%;
+    }
+    .slick-list{
+        position: relative;
+        display: block;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .slick-list:focus{
+        outline:none;
+    }
+    .slick-slide{
+        display: none;
+        float: left;
+        height: 100%;
+        min-height: 1px;
+    }
+    .slick-slide img{
+        display:block;
+    }
+    .slick-initialized .slick-slide{
+        display: block;
+    }
+    .slick-loading .slick-slide{
+        visibility: hidden;
+    }
