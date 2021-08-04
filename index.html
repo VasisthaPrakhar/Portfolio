@@ -11,7 +11,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
@@ -24,8 +25,8 @@
                     <div>
                         <a href="#">Home</a>
                         <a href="#">About</a>
-                        <a href="#">Skills And Tech</a>
                         <a href="#">Education</a>
+                        <a href="#">Skills And Tech</a>
                         <a href="#">Projects</a>
                         <a href="#">Tools I Use</a>
                     </div>
@@ -67,9 +68,156 @@
                     <a href="#"><img src="./images/iconmonstr-github-1-240.png" alt=""></a>
                     <a href="#"><img src="./images/icons8-hackerrank.svg" alt=""></a>
                     <a href="#"><img src="./images/code-forces-3628105.svg" alt=""></a>
+                    <a href="#"><img src="./images/mail.svg" alt=""></a>
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
+    <section class="freelancer">
+        <h1>Education</h1>
+        <h3>Little Flowers Public Sr. Sec. School</h3>
+        <p>Class 10th: 10CGPA</p>
+        <p>Class 12th: 91.60%</p>
+        <h4>Faculty of Engineering And Technology</h4>
+        <h3>Jamia Millia Islamia University</h3>
+        <h4>B.Tech in Computer Engineering</h4>
+        <p>Expected Graduation 2023</p>
+        <p>GPA till Now  9.00</p>
+    </section>
+    <section class="reviews">
+        <div class="container">
+            <h1 class="section-heading"><span>My </span>Projects</h1>
+            <p>Here's a selection of projects I've worked on personally</p>
+            <div class="slider">
+                <div class="slide">
+                    <img src="" alt="">
+                    <p></p>
+                    <span></span>
+                </div>
+                <div class="slide">
+                    <img src="" alt="">
+                    <p></p>
+                    <span></span>
+                </div>
+                <div class="slide">
+                    <img src="" alt="">
+                    <p></p>
+                    <span></span>
+                </div>
+                <div class="slide">
+                    <img src="" alt="">
+                    <p></p>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="skills">
+        <div class="container flex">
+            <div class="flex-1 gd">
+                <h1>My <span>Skills</span></h1>
+                <h3>C++</h3>
+                <div class="meter">
+                    <span style="width: 87%"></span>
+                </div>
+                <h3>HTML</h3>
+                <div class="meter">
+                    <span style="width: 96%"></span>
+                </div>
+                <h3>CSS</h3>
+                <div class="meter">
+                    <span style="width: 93%"></span>
+                </div>
+                <h3>JavaScript</h3>
+                <div class="meter">
+                    <span style="width: 84%"></span>
+                </div>
+                <h3>MySql</h3>
+                <div class="meter">
+                    <span style="width: 77%"></span>
+                </div>
+                <h3>Data Structures And Algorithms</h3>
+                <div class="meter">
+                    <span style="width: 79%"></span>
+                </div>
+                <h3>NodeJs</h3>
+                <div class="meter">
+                    <span style="width: 83%"></span>
+                </div>
+            </div>
+            <div class="flex-1 gd grid">
+                    <div class="container">
+                        <h1 class="section-heading"><span>Tech </span>I Use</h1>
+                        <p>Technologies I Am Familiar with</p>
+                        <div class="card-wrapper">
+                            <div class="card">
+                                <img src="./images/icons8-c++.svg" alt="">
+                                <h3>C++</h3>
+                            </div>
+                            <div class="card">
+                                <img src="./images/icons8-html-5.svg" alt="">
+                                <h3>HTML 5</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-css3.svg" alt="">
+                                <h3>CSS</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-javascript.svg" alt="">
+                                <h3>JavaScript</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-nodejs.svg" alt="">
+                                <h3>NodeJs</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-mysql-logo.svg" alt="">
+                                <h3>MySql</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-react.svg" alt="">
+                                <h3>React Js</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-mongodb.svg" alt="">
+                                <h3>Mongodb</h3>
+                            </div>    
+                            <div class="card">
+                                <img src="./images/icons8-c-programming.svg" alt="">
+                                <h3>C</h3>
+                            </div> 
+                            <div class="card">
+                                <img src="./images/icons8-python.svg" alt="">
+                                <h3>Python</h3>
+                            </div>  
+                            <div class="card">
+                                <img src="./images/Papirus-Team-Papirus-Apps-Octave.svg" alt="">
+                                <h3>Octave</h3>
+                            </div>  
+                            <div class="card">
+                                <img src="./images/icons8-flutter.svg" alt="">
+                                <h3>Flutter</h3>
+                            </div>         
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(".meter > span").each(function () {
+  $(this)
+    .data("origWidth", $(this).width())
+    .width(0)
+    .animate(
+      {
+        width: $(this).data("origWidth")
+      },
+      1200
+    );
+});
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
 </html>
