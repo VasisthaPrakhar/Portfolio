@@ -11,6 +11,9 @@ body{
     font-family: 'Poppins' ,sans-serif ;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 *{
     padding: 0;
@@ -46,6 +49,8 @@ header nav .branding{
     margin-right: 3rem;
 }
 .hero{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
     padding:3rem 0;
 }
 .hero .left .img{
@@ -79,6 +84,7 @@ section{
 }
 section.about .about-me-img{
     height:450px;
+    width: 425px;
 }
 
 section.about h1{
