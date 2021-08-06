@@ -347,6 +347,9 @@ section.skills .meter {
         height: 100%;
         min-height: 1px;
     }
+    .slick-track{
+        width: fit-content;
+    }
     .slick-slide img{
         display:block;
     }
