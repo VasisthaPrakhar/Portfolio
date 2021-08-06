@@ -16,15 +16,35 @@
 <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+   <div class="site-main-wrapper">
+       <button class="hamburger">
+           <img src="./images/hamberger.svg" alt="">
+       </button>
+       <div class="mobile-nav">
+           <button class="times"><img src="./images/times.svg" alt=""></button>
+            <img src="./images/logonew.svg" alt="">
+            <ul class="list">
+                <li><a href="#main-nav">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills And Tech</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#tools">Tools I Use</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="btn btn-secondary">Resume</button>
+       </div>
+
+
     <header>
         <div class="container ">
-            <nav class="flex items-center justify-between">
+            <nav id="main-nav" class="flex items-center justify-between">
                 <div class="left flex items-center">
                     <div class="branding">
                         <img src="./images/logo.svg" alt="">
                     </div>
                     <div>
-                        <a href="#">Home</a>
+                        <a href="#main-nav">Home</a>
                         <a href="#about">About</a>
                         <a href="#education">Education</a>
                         <a href="#skills">Skills And Tech</a>
@@ -33,7 +53,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <button class="btn btn-primary">Contact</button>
+                    <a href="#contact" class="btn btn-primary" id="cont">Contact</a>
                 </div>
             </nav>
             <div class="hero flex items-center justify-between">
@@ -53,11 +73,11 @@
     </header>
 
     <section id="about" class="about">
-        <div class="container flex items-center">
+        <div class="container flex items-center about-inner-wrap">
             <div class="flex-1">
                 <img class="about-me-img" src="./images/giphy.gif" alt="">
             </div>
-            <div class="flex-1">
+            <div class="flex-1 right">
                 <h1>About <span>Me</span></h1>
                 <h3>Hi!👋 I'm Prakhar Vasistha </h3>
                 <p>
@@ -120,7 +140,7 @@
         </div>
     </section>
     <section id="skills" class="skills">
-        <div class="container flex">
+        <div class="container flex sk">
             <div class="flex-1 gd">
                 <h1>My <span>Skills</span></h1>
                 <h3>C++</h3>
@@ -220,9 +240,9 @@
                         <img src="./images/vscode.png" alt="">
                     </div>
                     <div class="card-content">
-                        <a href="#"><h1>Virtual studio Code</h1></a>
-                        <p>lorem ipsum dolor sit</p>
-                        <a href="#">Read More</a>
+                        <a href="https://code.visualstudio.com/download"><h1>Virtual studio Code</h1></a>
+                        <p>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and cloud applications.</p>
+                        <a href="https://code.visualstudio.com/">Read More</a>
                     </div>
                 </div>
                 <div class="card">
@@ -230,9 +250,9 @@
                         <img src="./images/sublime.png" alt="">
                     </div>
                     <div class="card-content">
-                        <a href="#"><h1>Sublime Text</h1></a>
-                        <p>lorem ipsum dolor sit</p>
-                        <a href="#">Read More</a>
+                        <a href="https://www.sublimetext.com/download"><h1>Sublime Text</h1></a>
+                        <p>Sublime Text is a shareware cross-platform source code editor with a Python application programming interface (API). It natively supports many programming Languages.</p>
+                        <a href="https://www.sublimetext.com/">Read More</a>
                     </div>
                 </div>
                 <div class="card">
@@ -240,9 +260,9 @@
                         <img src="./images/git.png" alt="">
                     </div>
                     <div class="card-content">
-                        <a href="#"><h1>Git & Github</h1></a>
-                        <p>lorem ipsum dolor sit</p>
-                        <a href="#">Read More</a>
+                        <a href="https://github.com/"><h1>Git & Github</h1></a>
+                        <p>Git is a version control system that lets you manage and keep track of your source code history. GitHub is a cloud-based hosting service that lets you manage Git repositories</p>
+                        <a href="https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners">Read More</a>
                     </div>
                 </div>
                 <div class="card">
@@ -250,9 +270,9 @@
                         <img src="./images/jetbrains.png" alt="">
                     </div>
                     <div class="card-content">
-                        <a href="#"><h1>jetbrains IDE's</h1></a>
-                        <p>lorem ipsum dolor sit</p>
-                        <a href="#">Read More</a>
+                        <a href="https://www.jetbrains.com/products/#type=ide"><h1>jetbrains IDE's</h1></a>
+                        <p>JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools</p>
+                        <a href="https://www.jetbrains.com/">Read More</a>
                     </div>
                 </div>
                 <div class="card">
@@ -260,9 +280,9 @@
                         <img src="./images/shell.png" alt="">
                     </div>
                     <div class="card-content">
-                        <a href="#"><h1>Shell(Linux, Bash)</h1></a>
-                        <p>lorem ipsum dolor sit</p>
-                        <a href="#">Read More</a>
+                        <a href="https://www.gnu.org/software/bash/"><h1>Shell</h1></a>
+                        <p>The shell is a program that enables us to send commands to the computer and receive output. It is also referred to as the terminal or command line. I for one use Bash and Wsl shell</p>
+                        <a href="https://swcarpentry.github.io/shell-novice/setup.html">Read More</a>
                     </div>
                 </div>
                 <div class="card">
@@ -270,16 +290,16 @@
                         <img src="./images/terminal.png" alt="">
                     </div>
                     <div class="card-content">
-                        <a href="#"><h1>Windows Terminal</h1></a>
-                        <p>lorem ipsum dolor sit</p>
-                        <a href="#">Read More</a>
+                        <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701"><h1>Windows Terminal</h1></a>
+                        <p>The Windows Terminal is a modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.</p>
+                        <a href="https://docs.microsoft.com/en-us/windows/terminal/get-started">Read More</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <h1 class="section-heading">Let's <span>Talk</span></h1>
             <p>Want to connect?<br>My inbox is always Open!</p>
@@ -324,6 +344,7 @@
         </div>
     </footer>
 
+   </div>
 
     <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>

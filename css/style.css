@@ -32,6 +32,31 @@ header{
     margin: 0 auto;
 }
 
+@media (min-width:576px){
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+
+
 header nav .left a{
     color: var(--pure);
     text-decoration: none;
@@ -44,17 +69,21 @@ header nav .left a{
    }
 header nav {
     padding:2rem 0;
+    margin-bottom: 6rem;
+}
+header nav .right a {
+    text-decoration: none;
 }
 header nav .branding{
     margin-right: 3rem;
 }
 .hero{
-    margin-top: 6rem;
+    
     margin-bottom: 2rem;
     padding:3rem 0;
 }
 .hero .left .img{
-    width: 400px;
+    width: fit-content;
 }
 .hero .right{
     color: var(--pure);
@@ -85,6 +114,12 @@ section{
 section.about .about-me-img{
     height:450px;
     width: 425px;
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+}
+section.about .about-me-img:hover{
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
 }
 
 section.about h1{
@@ -155,9 +190,11 @@ section.freelancer p{
 }
 section.skills{
     background: var(--light);
+    padding-top:5rem;
+    padding-bottom: 5rem;
 }
 section.skills .gd{
-    max-height: 500px;
+    max-height: fit-content;
 }
 section.skills .grid{
     margin-left: 35px;
@@ -443,3 +480,153 @@ section.skills .meter {
    footer .copyright{
        color: var(--ternary);
    }
+   .site-main-wrapper{
+       position: relative;
+   }
+   .hamburger{
+       position: absolute;
+       top: 40px;
+       right: 40px;
+       z-index: 11;
+       background:none;
+       border: none;
+       outline: none;
+       cursor: pointer;
+       display:none;
+   }
+   .hamburger img{
+       width: 30px;
+   }
+   .mobile-nav{
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 1001;
+       background: var(--light);
+       max-width:100%;
+       height: 100%;
+       padding: 2rem;
+        padding-top: 5rem;
+        transform: translateX(-100%);
+        transition: all .5s ease-in-out;
+   }
+   .open{
+       transform: translateX(0);
+   }
+   .times{
+       position: fixed;
+       top: 30px;
+       right: 30px;
+       border: none;
+       background: none;
+       outline:none;
+       cursor: pointer;
+       object-fit: cover;
+   }
+   .times img{
+       width: 30px;
+   }
+   .mobile-nav ul{
+       list-style-type: none;
+       margin-bottom: 1rem;
+   }
+   .mobile-nav ul li a{
+       color: var(--secondary);
+       text-decoration: none;
+       font-size: 2rem;
+   }
+
+   @media (max-width:1200px){
+    header #main-nav{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hero .left img{
+        width: 360px !important;
+        height: 540px !important;
+    }
+    .hero .right h1{
+        font-size:3rem;
+    }
+    .hero{
+        padding-top: 10rem;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 89%, 0 100%);
+    }
+    section.about .about-me-img{
+        height: 360px;
+        width: 315px;
+    }
+    section.skills .card-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.blog .card-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.blog{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 93%, 0 100%);
+    }
+}
+
+@media (max-width: 576px){
+    .hero{
+        flex-direction: column;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 69% 96%, 0 100%);
+    }
+    .hero .right{
+        position: absolute;
+        top: 260px;
+        padding:0 1rem;
+        background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.9));
+    }
+    .hero .left{
+        margin-top: -5rem;
+        /* margin-right: 5.5rem; */
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .about .right .social{
+        justify-content: center;
+    }
+    section{
+        padding: 3rem 0;
+    }
+    .skills .sk{
+        flex-direction: column;
+    }
+    section.blog .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.blog{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 96%, 0 100%);
+    }
+    section.freelancer h1{
+        line-height: 1.2;
+    }
+    section.freelancer{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+        padding-bottom: 7rem;
+    }
+    section.reviews .slider .slide{
+        padding: 0;
+    }
+    .section-heading + p{
+        margin-bottom: 3rem;
+    }
+    section.contact .card-wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.contact .input-wrap{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
