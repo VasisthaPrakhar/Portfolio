@@ -348,7 +348,7 @@ section.skills .meter {
         min-height: 1px;
     }
     .slick-track{
-        width: fit-content !important;
+        width: inherit !important;
     }
     .slick-slide img{
         display:block;
