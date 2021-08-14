@@ -48,3 +48,30 @@ $(".meter > span").each(function () {
         1200
       );
   });
+
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+           user: 'work.prakharvasistha@gmail.com',			//email ID
+         pass: 'eiekorgsqjuxkhag'				//Password 
+       }
+   });
+   function sendMail(email , otp){
+     var details = {
+       from: 'work.prakharvasistha@gmail.com', // sender address same as above
+       to: email, 					// Receiver's email id
+       subject: 'RTO App OTP ', // Subject of the mail.
+       html: otp					// Sending OTP 
+     };
+   
+   
+     transporter.sendMail(details, function (error, data) {
+       if(error)
+         console.log(error)
+       else
+         console.log("OTP Sent!!!");
+       });
+     }
+     //  var email = "vasistha.prakhar@gmail.com";
+  //  var otp = "123456";
+  //  sendMail(email,otp);	
